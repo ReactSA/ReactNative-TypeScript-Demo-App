@@ -14,7 +14,9 @@ Make sure you have yarn installed: [https://yarnpkg.com/lang/en/docs/install/](h
 
 open up another terminal and cd into project directory, then:
 
-`yarn run ios` for iOS or `yarn run android` for Android
+`yarn run ios` for building and running on an iOS simulator.
 
 _Note: I haven't had to do it this way for other RN apps I've worked on, but for some reason it's the only way I can get this one to build correctly on an iOS simulator._
 
+## What we need!
+I haven't set up the project to work on Android yet. If that's the way you roll in the RN world set it up and submit a pr por favor!
