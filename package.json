@@ -1,0 +1,38 @@
+{
+	"name": "TodoTypeScript",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "node node_modules/react-native/local-cli/cli.js start",
+		"test": "jest",
+		"ios": "react-native run-ios",
+		"android": "react-native run-android",
+		"tsc": "tsc",
+		"clean": "rimraf artifacts",
+		"build": "npm run clean && npm run tsc --",
+		"lint": "tslint src/**/*.ts",
+		"watch": "npm run build -- -w",
+		"start:ios": "npm run build && concurrently -r 'npm run watch' 'react-native run-ios'"
+	},
+	"dependencies": {
+		"concurrently": "^3.5.0",
+		"react": "16.0.0-alpha.12",
+		"react-native": "0.46.0",
+		"rimraf": "^2.6.1",
+		"tslint": "^5.5.0",
+		"typescript": "^2.4.1"
+	},
+	"devDependencies": {
+		"@types/jest": "^20.0.2",
+		"@types/react": "^15.0.35",
+		"@types/react-native": "^0.44.17",
+		"babel-core": "^6.25.0",
+		"babel-jest": "20.0.3",
+		"babel-preset-react-native": "2.1.0",
+		"jest": "20.0.4",
+		"react-test-renderer": "16.0.0-alpha.12"
+	},
+	"jest": {
+		"preset": "react-native"
+	}
+}
